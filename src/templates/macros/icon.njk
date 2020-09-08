@@ -1,0 +1,11 @@
+{% macro icon(name, mod = '', class = '') %}
+    {% if mod %}
+        {% set mod = ' icon-' + name + '--' + mod %}
+    {% endif %}
+    {% if class %}
+        {% set class = ' ' + class %}
+    {% endif %}
+    <svg class="icon-{{ name }}{{ mod }}{{ class }}">
+        <use xlink:href="img/icons/sprite.svg#{{ name }}"></use>
+    </svg>
+{% endmacro %}

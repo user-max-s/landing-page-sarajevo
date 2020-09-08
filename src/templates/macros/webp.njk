@@ -1,0 +1,11 @@
+{% macro webp(filename, ext = 'jpg', class = '', alt = '') %}
+  <picture>
+    <source srcset="{{ filename }}.webp" type="image/webp">
+    {% if ext == 'jpg' or ext == 'jpeg'%}
+      <source srcset="{{ filename }}.{{ ext }}" type="image/jpeg">
+    {% elif ext == 'png' %}
+      <source srcset="{{ filename }}.{{ ext }}" type="image/png">
+    {% endif %}
+    <img  class="{{ class }}" src="{{ filename }}.{{ ext }}" alt="{{ alt }}">
+  </picture>
+{% endmacro %}

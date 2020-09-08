@@ -1,0 +1,21 @@
+// 1. Configurations and helpers
+
+@import 'abstracts/assert-functions';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/placeholders';
+
+// 2. Vendors
+
+@import 'vendors/normalize';
+
+// 3. Project stuff
+
+@import 'project/base';
+@import 'project/fonts';
+@import 'project/typography';
+@import 'project/sprite.scss';
+
+// 4. Layout-related sections
+
+// 5. Components

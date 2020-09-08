@@ -1,0 +1,33 @@
+{% set title = 'Main page' %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>{{ title }}</title>
+        {% block css %}
+            <link rel="stylesheet" href="css/main.css">
+        {% endblock %}
+    </head>
+
+    <body class='page'>
+        {% block header %}
+            {% include "../partials/page-navbar.njk" %}
+        {% endblock %}
+
+        {% block content %}
+		
+        {% endblock %}
+
+        {% block footer %}
+            {% include "../partials/page-footer.njk" %}
+        {% endblock %}
+
+        {% block js %}
+            <script src="js/main.js"></script>
+        {% endblock %}
+    </body>
+
+</html>
